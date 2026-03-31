@@ -1,49 +1,49 @@
 # Block Inspector
 
-En enkel dApp byggd med TypeScript och Viem för att interagera med Ethereum Sepolia-nätverket.
+A simple dApp built with TypeScript and Viem for interacting with the Ethereum Sepolia network.
 
-## Vad kan den göra?
+## What can it do?
 
-- Visa aktuellt antal block i Sepolia-kedjan
-- Slå upp saldo för en Ethereum-adress
-- Skicka transaktioner via MetaMask
+- Display the current block height of the Sepolia chain
+- Look up the balance of an Ethereum address
+- Send transactions via MetaMask
 
-## Krav
+## Requirements
 
-- Node.js installerat
-- MetaMask installerat i webbläsaren
-- Ett konto på [Infura](https://infura.io) för att få en API-nyckel till Sepolia
+- Node.js installed
+- MetaMask installed in your browser
+- An account on [Infura](https://infura.io) to get an API key for Sepolia
 
-## Kom igång
+## Getting started
 
-**1. Klona repot**
+**1. Clone the repo**
 
 ```bash
 git clone https://github.com/silvergin7/block-inspector.git
 cd block-inspector
 ```
 
-**2. Installera beroenden**
+**2. Install dependencies**
 
 ```bash
 npm install
 ```
 
-**3. Skapa en `.env`-fil i rooten med din Infura-URL**
+**3. Create a `.env` file in the root with your Infura URL**
 
 ```
-VITE_BASE_URL=https://sepolia.infura.io/v3/DIN_NYCKEL
+VITE_BASE_URL=https://sepolia.infura.io/v3/YOUR_KEY
 ```
 
-**4. Starta projektet**
+**4. Start the project**
 
 ```bash
 npm run dev
 ```
 
-Öppna sedan `http://localhost:3000` i webbläsaren. Se till att MetaMask är installerat och inställt på Sepolia-nätverket.
+Then open `http://localhost:3000` in your browser. Make sure MetaMask is installed and set to the Sepolia network.
 
-## Tester
+## Tests
 
 ```bash
 npm run test
