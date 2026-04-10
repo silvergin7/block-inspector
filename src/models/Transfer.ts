@@ -1,6 +1,6 @@
-import { parseEther, isAddress, createWalletClient, http, custom } from "viem";
-import { sepolia } from "viem/chains";
-import type { MetaMaskInpageProvider } from "@metamask/providers";
+import { parseEther, isAddress, createWalletClient, custom } from 'viem';
+import { sepolia } from 'viem/chains';
+import type { MetaMaskInpageProvider } from '@metamask/providers';
 
 declare global {
   interface Window {
@@ -14,9 +14,9 @@ export default class Transfer {
   amount: string;
 
   constructor() {
-    this.from = "";
-    this.to = "";
-    this.amount = "";
+    this.from = '';
+    this.to = '';
+    this.amount = '';
   }
 
   async sendTransaction(from: string, to: string, amount: string): Promise<string> {
