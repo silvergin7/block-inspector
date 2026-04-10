@@ -1,12 +1,6 @@
-import { parseEther, isAddress, createWalletClient, custom } from 'viem';
-import { sepolia } from 'viem/chains';
-import type { MetaMaskInpageProvider } from '@metamask/providers';
-
-declare global {
-  interface Window {
-    ethereum?: MetaMaskInpageProvider;
-  }
-}
+import { isAddress, parseEther } from 'viem';
+import { connectWallet } from './transfer/connectWallet';
+import { getWalletClient } from './transfer/getWalletClient';
 
 export default class Transfer {
   from: string;
@@ -19,27 +13,24 @@ export default class Transfer {
     this.amount = '';
   }
 
-  async sendTransaction(from: string, to: string, amount: string): Promise<string> {
-    if (!isAddress(from) || !isAddress(to)) throw new Error('Invalid Ethereum address');
-    if (!window.ethereum) throw new Error('MetaMask is not installed');
+  async connectWallet(): Promise<`0x${string}`> {
+    const account = await connectWallet();
+    this.from = account;
+    return account;
+  }
 
-    await window.ethereum.request({
-      method: 'wallet_switchEthereumChain',
-      params: [{ chainId: '0xaa36a7' }],
-    });
+  async sendTransaction(to: string, amount: string): Promise<string> {
+    if (!this.from) throw new Error('Connect MetaMask first');
+    if (!isAddress(to)) throw new Error('Invalid Ethereum address');
 
-    const walletClient = createWalletClient({
-      chain: sepolia,
-      transport: custom(window.ethereum),
-    });
+    const walletClient = getWalletClient();
 
     const hash = await walletClient.sendTransaction({
-      account: from as `0x${string}`,
+      account: this.from as `0x${string}`,
       to: to as `0x${string}`,
       value: parseEther(amount),
     });
 
-    this.from = from;
     this.to = to;
     this.amount = amount;
 

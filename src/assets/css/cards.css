@@ -1,0 +1,50 @@
+.info-card {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto 1.5rem auto;
+  background: rgba(10, 8, 20, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.info-card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #7c3aed;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #c4b5fd;
+}
+
+.wallet-status {
+  display: none;
+  margin-bottom: 1rem;
+  font-size: 0.88rem;
+  color: #c4b5fd;
+  word-break: break-all;
+}
+
+.output-text {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #a78bfa;
+  word-break: break-all;
+}
+
+.output-text a {
+  color: #c4b5fd;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.output-text a:hover {
+  color: #ddd6fe;
+}

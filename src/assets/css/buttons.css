@@ -1,0 +1,68 @@
+.btn {
+  display: inline-block;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.btn-connect {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.btn-connected {
+  background: #16a34a;
+  color: #fff;
+  padding: 0.6rem 1.1rem;
+}
+
+.btn-disconnect {
+  background: #dc2626;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-disconnect:hover {
+  background: #b91c1c;
+  opacity: 1;
+}
+
+.wallet-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  flex-wrap: nowrap;
+}
+
+.wallet-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.9rem;
+}
+
+.metamask-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.btn-connected .metamask-icon {
+  width: 16px;
+  height: 16px;
+}

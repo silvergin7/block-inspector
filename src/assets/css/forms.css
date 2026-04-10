@@ -1,0 +1,42 @@
+.address-input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  color: #f4f4f4;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  outline: none;
+}
+
+.address-input:focus {
+  border-color: #7c3aed;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.input-row .address-input {
+  margin-bottom: 0;
+}
+
+.clear-btn {
+  background: transparent;
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  color: #a78bfa;
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.clear-btn:hover {
+  background: rgba(124, 58, 237, 0.2);
+}

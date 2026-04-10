@@ -1,0 +1,32 @@
+header {
+  position: sticky;
+  top: 0;
+  padding: 1.25rem 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7c3aed;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+main {
+  padding: 2.5rem 0;
+}
+
+footer {
+  padding: 0.1rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(244, 244, 244, 0.9);
+  border-top: 1px solid rgba(124, 58, 237, 0.2);
+}
